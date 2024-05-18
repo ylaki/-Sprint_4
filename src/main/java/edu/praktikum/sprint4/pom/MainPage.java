@@ -31,8 +31,8 @@ public class MainPage {
     }
 
     //Questions check methods
-    public String openQuestion(int index) {
-        By question = By.id(String.format("accordion__heading-%s", index));
+    public String openQuestion(int questionIndex) {
+        By question = By.id(String.format("accordion__heading-%s", questionIndex));
         WebElement questionElement = webDriver.findElement(question);
         ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView();", questionElement);
         new WebDriverWait(webDriver, Duration.ofSeconds(5))
@@ -41,8 +41,8 @@ public class MainPage {
         return questionElement.getText();
     }
 
-    public String openAnswer(int index) {
-        By answer = By.id(String.format("accordion__panel-%s", index));
+    public String openAnswer(int questionIndex) {
+        By answer = By.id(String.format("accordion__panel-%s", questionIndex));
         new WebDriverWait(webDriver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.visibilityOfElementLocated(answer));
         return webDriver.findElement(answer).getText();

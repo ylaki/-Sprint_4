@@ -35,13 +35,6 @@
             <artifactId>selenium-java</artifactId>
             <version>4.20.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <version>5.8.2</version>
-            <scope>test</scope>
-        </dependency>
-
     </dependencies>
 
 </project>
